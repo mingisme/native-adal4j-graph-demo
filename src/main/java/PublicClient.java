@@ -21,16 +21,16 @@ public class PublicClient {
     //    private final static String AUTHORITY = "https://login.microsoftonline.com/common/";
     private final static String AUTHORITY = "https://login.chinacloudapi.cn/common/";
 
-    private final static String CLIENT_ID = "97966372-2763-40d7-894b-69140d8b0ac9";// "7f4daa23-b0b9-4e44-bba2-12b2a36e8502";//"59a4bfa9-7ce6-45c2-928c-e60505ec5697";
+    private final static String CLIENT_ID = "xxxx";// "7f4daa23-b0b9-4e44-bba2-12b2a36e8502";//"59a4bfa9-7ce6-45c2-928c-e60505ec5697";
 
     public static void main(String args[]) throws Exception {
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(
                 System.in))) {
 //            System.out.print("Enter username: ");
-            String username = "swang@devwang.partner.onmschina.cn"; //br.readLine();
+            String username = "xxxx@devwang.partner.onmschina.cn"; //br.readLine();
 //            System.out.print("Enter password: ");
-            String password = "Test1234"; //br.readLine();
+            String password = "xxxxx"; //br.readLine();
 
             // Request access token from AAD
             AuthenticationResult result = getAccessTokenFromUserCredentials(
@@ -46,7 +46,7 @@ public class PublicClient {
 
             System.out.println(gson.toJson(user));
 
-            List<User> users = Graph.getUsersOfGroup(accessToken,"9acce987-bc7d-459a-8636-b13894b2fc55");
+            List<User> users = Graph.getUsersOfGroup(accessToken,"xxxx");
 
             System.out.println(gson.toJson(users));
         }
